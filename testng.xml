@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  <parameter name="ip" value="http://192.168.1.4:4444/wd/hub"></parameter>
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="seleniumgrid.SeleniumGrid"/>
+    </classes>
+    
+  </test> <!-- Test -->
+  <test thread-count="5" name="Test">
+  <parameter name="ip" value="http://192.168.1.4:4444/wd/hub"></parameter>
+  <parameter name="browser" value="firefox"></parameter>
+    <classes>
+      <class name="seleniumgrid.SeleniumGrid"/>
+    </classes>
+    </test>
+</suite> <!-- Suite -->

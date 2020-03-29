@@ -1,5 +1,8 @@
 package seleniumgrid;
 
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -8,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Test;
 
 /*CODE:
  * 1/Give the address /URL of
@@ -21,8 +25,9 @@ import org.openqa.selenium.remote.RemoteWebDriver;
  * 4..chromedriiver.exe
  */
 public class SeleniumGrid {
-	public static void main(String[] args) throws MalformedURLException {
-		
+	@Test
+	@Parameters({"ip","browser"})
+	public void seleniumgrid(@Optional("ip") String ip,@Optional("browser") String browser) throws MalformedURLException {
 //		1.define DesiredCapabilities
 		DesiredCapabilities cap=new DesiredCapabilities();
 		cap.setBrowserName("chrome");
